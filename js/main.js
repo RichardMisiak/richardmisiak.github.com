@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', function(){
             document.getElementById("footer").classList.add('leave-right');
 
             window.setTimeout(() => {
-                close();
+                document.getElementsByTagName('body')[0].remove();
+                window.close();
             }, 1000);
         });
 });
