@@ -1,5 +1,15 @@
-$(document).ready(function() {
-    $('.btn-ok').click(function(){
-        document.getElementById("audio").play();
-    });
+document.addEventListener('DOMContentLoaded', function(){
+    document.getElementById('ok-button').addEventListener('click', () => {
+            document.getElementById('audio').play();
+
+            document.getElementById("title").classList.add('leave-left');
+            document.getElementById("main-text").classList.add('leave-right');
+            document.getElementById('ok-button').classList.add('leave-left');
+            document.getElementById("footer").classList.add('leave-right');
+
+            window.setTimeout(() => {
+                close();
+            }, 1000);
+        });
 });
+
